@@ -19,7 +19,8 @@ button{transition: 0.3s;cursor: pointer;}
 button:hover{opacity: 0.5;}
 .button{border: 3px solid #32547B; background-color: rgba(0, 0, 0, 0); color: #32547B;padding: 5px 20px;}
 .full_btn{background-color: #32547B; color: #fff;}
-.btn.red{border-color: #ff3e3e;color: #ff3e3e;}
+.button.red{border-color: #ff3e3e;color: #ff3e3e;}
+.button.gray{background-color: #555;border-color: #555; color: #fff;}
 .main_480{display: none;}
 .font-change{font-family: "gothic" !important;}
 i{pointer-events: none !important;}
@@ -939,8 +940,89 @@ footer > *{
     margin: 0 1em;
 }
 
-#show_add_btn{
-    position: absolute;
-    bottom: 0;
-    right: 0;
+#show_add_btn{position: absolute;bottom: 0;right: 0;}
+
+/* popup */
+.modal-content{
+    border: none;
+    border-radius: 0;
+    border-top: 10px solid #32547B;
 }
+
+.modal-content::after{
+    content: '';
+    position: absolute;
+    width: 20%;
+    height: 10px;
+    top: -10px;
+    right: 0;
+    background-color: #ffb307;
+}
+
+.modal-header{border: none;padding-bottom: 0;}
+.modal-footer{border: none;padding-top: 0;}
+/* history */
+#history_nav{
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top:3em;
+    margin-bottom: 2em;
+}
+
+#history_add_open{
+    position: absolute;
+    top: 0.5em;
+    right: 0.5em;
+}
+
+.history_link{
+    display: inline-block;
+    padding: 8px 23px;
+    height: 40px;
+    margin: 0.2em 0;
+    background-color: #ddd;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.history_link:hover{opacity: 0.5;}
+.history_link.select{
+    background-color: #32547B;
+    color: #fff;
+}
+
+#history_title{
+    font-size: 1.8em;
+    font-weight: bold;
+    margin-right: 1em;
+    padding-right: 1em;
+    color: #32547B;
+    border-right: 3px solid #32547B;
+}
+
+#history_list{width: 100%;}
+.history_item{
+    position: relative;
+    width: 100%;
+    margin-bottom: 1em;
+    padding: 0 1em;
+    padding-bottom: 1em;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.history_item:last-child{border: none;margin-bottom: 0;padding-bottom: 0;}
+.history_date{
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-right: 1em;
+    color: #32547B;
+}
+
+.history_content{margin: 0;}
